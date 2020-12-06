@@ -1,69 +1,74 @@
 DOCKER API WITH FLASK
 
-ENDPOINTS:
+#### ENDPOINTS:
 
 
 
 
 
-route("/")==> index
+- route("/")==> index
   
 
-route("/images")==> list_images
+- route("/images")==> list_images
     
 
 
-route("/containers")==> list_containers
+- route("/containers")==> list_containers
    
 
 
-route("/container/stats")==> container_stats
+- route("/container/stats")==> container_stats
    
 
-route("/container/run")==> run_container
-arguments:
-    name: String
-    image: String
-    version: String optional [ default: latest ]
+- route("/container/run")==> run_container
+    arguments:
+        name: String
+        image: String
+        version: String optional [ default: latest ]
 
 
-route("/networks")==> container_networks
+- route("/networks")==> container_networks
    
 
-route("/network/create")==> container_network_create
-arguments:
-    name: String
-    driver_name: String optional [ default: 'bridge' ]
+- route("/network/create")==> container_network_create
+  arguments:
+      name: String
+      driver_name: String optional [ default: 'bridge' ]
     
 
 
-route("/volumes")==> container_volumes
+- route("/volumes")==> container_volumes
 
 
 
-route("/volume/create")==> container_volume_create
-arguments:
-    name: String
-    driver_name: String optional [ default: 'local' ]
+- route("/volume/create")==> container_volume_create
+  arguments:
+      name: String
+      driver_name: String optional [ default: 'local' ]
 
 
 
 
-route("/image/search")==> image_search
-arguments:
-    name: String
+- route("/image/search")==> image_search
+  arguments:
+      name: String
+
   
-  
     
-route("/container/stop")==> container_stop
-arguments:
-    name: String
-    
+- route("/container/stop")==> container_stop
+  arguments:
+      name: String
     
     
-route("/container/remove")==> container_remove
-arguments:
-    name: String
+    
+- route("/container/remove")==> container_remove
+  arguments:
+      name: String
     
     
-route("/container/remove/all")==> container_remove_all
+- route("/container/remove/all")==> container_remove_all
+
+
+
+ for example:  http://IP:5000/containers : to list all running containers
+ http://IP:5000/container/run?name=my-con&image=centos : with argument to run the my-con container from centos image
