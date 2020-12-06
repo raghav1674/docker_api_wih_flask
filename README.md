@@ -21,9 +21,13 @@
    
 
 - __route("/container/run")==> run_container__
+
     arguments:
+    
         name: String
+        
         image: String
+        
         version: String optional [ default: latest ]
 
 
@@ -31,8 +35,11 @@
    
 
 - __route("/network/create")==> container_network_create__
+
   arguments:
+  
       name: String
+      
       driver_name: String optional [ default: 'bridge' ]
     
 
@@ -42,27 +49,36 @@
 
 
 - __route("/volume/create")==> container_volume_create__
+
   arguments:
+  
       name: String
+      
       driver_name: String optional [ default: 'local' ]
 
 
 
 
 - __route("/image/search")==> image_search__
+
   arguments:
+  
       name: String
 
   
     
 - __route("/container/stop")==> container_stop__
+
   arguments:
+  
       name: String
     
     
     
 - __route("/container/remove")==> container_remove__
+
   arguments:
+  
       name: String
     
     
