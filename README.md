@@ -6,42 +6,42 @@ DOCKER API WITH FLASK
 
 
 
-- route("/")==> index
+- __route("/")==> index__
   
 
-- route("/images")==> list_images
+-  __route("/images")==> list_images__
     
 
 
-- route("/containers")==> list_containers
+- __route("/containers")==> list_containers__
    
 
 
-- route("/container/stats")==> container_stats
+- __route("/container/stats")==> container_stats____
    
 
-- route("/container/run")==> run_container
+- __route("/container/run")==> run_container__
     arguments:
         name: String
         image: String
         version: String optional [ default: latest ]
 
 
-- route("/networks")==> container_networks
+- __route("/networks")==> container_networks__
    
 
-- route("/network/create")==> container_network_create
+- __route("/network/create")==> container_network_create__
   arguments:
       name: String
       driver_name: String optional [ default: 'bridge' ]
     
 
 
-- route("/volumes")==> container_volumes
+- __oute("/volumes")==> container_volumes__
 
 
 
-- route("/volume/create")==> container_volume_create
+- __route("/volume/create")==> container_volume_create__
   arguments:
       name: String
       driver_name: String optional [ default: 'local' ]
@@ -49,26 +49,29 @@ DOCKER API WITH FLASK
 
 
 
-- route("/image/search")==> image_search
+- __route("/image/search")==> image_search__
   arguments:
       name: String
 
   
     
-- route("/container/stop")==> container_stop
+- __route("/container/stop")==> container_stop__
   arguments:
       name: String
     
     
     
-- route("/container/remove")==> container_remove
+- __route("/container/remove")==> container_remove__
   arguments:
       name: String
     
     
-- route("/container/remove/all")==> container_remove_all
+- __route("/container/remove/all")==> container_remove_all__
 
 
 
- for example:  http://IP:5000/containers : to list all running containers
+ for example: 
+ 
+ http://IP:5000/containers : to list all running containers
+ 
  http://IP:5000/container/run?name=my-con&image=centos : with argument to run the my-con container from centos image
