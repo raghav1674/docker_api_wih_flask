@@ -73,7 +73,7 @@ def docker_ps():
 
 def docker_images():
     cmd = "docker images"
-    docker_images_properties=["REPOSITORY","TAG","IMAGE ID"," CREATED","SIZE"]
+    docker_images_properties=["REPOSITORY","TAG","IMAGE ID","CREATED","SIZE"]
     docker_images_list=[]
     for img_prop_value in json.loads(run_cmd(cmd))["output"].split("\n")[1:]:
         img_prop_values = [i.strip() for i in img_prop_value.split("  ") if i!='']
