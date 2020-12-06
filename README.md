@@ -17,7 +17,7 @@
    
 
 
-- __route("/container/stats")==> container_stats____
+- __route("/container/stats")==> container_stats__
    
 
 - __route("/container/run")==> run_container__
